@@ -2,124 +2,222 @@
 
 **Effective Date: October 21, 2026**
 
+*Versão em português logo abaixo / Portuguese version below.*
+
 ## 1. Introduction
 
-This Privacy Policy explains how Cat's Clicker Corp. ("the Game") handles information when you play the Game, use Discord Rich Presence, or participate in cooperative multiplayer sessions.
+This Privacy Policy explains what information Cat's Clicker Corp. ("the Game") processes when you play it, use Discord Rich Presence, or take part in cooperative (co-op) multiplayer sessions.
 
-Cat's Clicker Corp. is an independent game. Discord and NodeTunnel are separate third-party services and are not operated by the Game's developer.
+Cat's Clicker Corp. is an independent game made by DARKWINTER ("the developer"). Discord and NodeTunnel are separate third-party services and are not operated by the developer.
+
+In short: the Game has no accounts, no advertising, no analytics and no purchases. Your progress stays on your own device. The only times information leaves your device are (a) Discord Rich Presence, if you use Discord, and (b) co-op sessions.
 
 ## 2. Information Processed by the Game
 
 ### A. Local Gameplay Data
 
-The Game may process gameplay information needed to operate its features, including progress, rewards, and cooperative session state.
+Your progress (save slots), settings (such as volume and language) and, in co-op, a counter of the rewards earned as a guest are saved in files on your own device, in the Game's local user-data folder. This data is not sent to the developer.
 
-The Game also uses a local save file to store a gameplay-related counter associated with rewards earned by a guest player in cooperative sessions.
-
-This information is stored locally by the Game. The developer does not operate a dedicated game-progress database or account server.
-
-Local files may remain on your device until they are deleted by the Game, by you, or through other applicable device or storage-management processes.
+The developer does not operate an account server or a game-progress database. Local files stay on your device until you or the Game delete them.
 
 ### B. Discord Rich Presence
 
-The Game uses the open-source `discord-rich-presence-godot` plugin by SlayHorizon to communicate with the Discord desktop client through Discord Rich Presence.
+The Game uses the open-source `discord-rich-presence-godot` plugin by SlayHorizon to talk to the Discord desktop app installed on your own computer. On Linux and macOS, the plugin uses the system's local `nc` tool to reach Discord's local socket; on Windows it uses a local named pipe. This communication stays on your computer until Discord itself handles it.
 
-When this feature is active, the Game sends configured activity information to Discord. This may include:
+When active, the Game gives Discord a short activity text (for example, that you are playing the demo) and the Game's name. Whether other Discord users can see it depends on Discord's features and your Discord privacy settings. The Game does not read your Discord messages, password or friends list.
 
-- The Game's name.
-- Your current in-game activity or state.
-- Relevant multiplayer session or party information configured by the Game.
-
-The integration is intended to display game activity. The Game does not intentionally use this integration to read your private Discord messages, access your password, or retrieve your friends list.
-
-Discord processes activity information under its own privacy policy. Whether other Discord users can see your activity depends on Discord's functionality and your account settings.
-
-Discord Privacy Policy: https://discord.com/privacy
+Discord processes this information under its own privacy policy: https://discord.com/privacy
 
 ### C. Cooperative Multiplayer and NodeTunnel
 
-The Game uses NodeTunnel for relay-based cooperative multiplayer connections.
+Co-op mode (2 players) uses NodeTunnel, a third-party relay service, so that the host and the guest can connect without opening ports on a router. Single-player mode does not use the network.
 
-During a multiplayer session, gameplay and session information may be transmitted between the host and guest through the networking connection. This may include gameplay actions, synchronized game state, cursor positions, reward information, and session-related information needed to operate cooperative features.
+During a co-op session, the following is sent between the host and the guest through the NodeTunnel relay:
 
-The Game does not operate its own dedicated multiplayer account or gameplay database.
+- the guest's actions (clicks on the yarn, collecting treats, purchases in the shop, rebirth and roulette actions);
+- the synchronized game state (yarn and its health, treats on the ground, upgrade and rebirth settings, challenge state, tutorial messages);
+- the other player's cursor position, visual effects and connection checks (ping);
+- the room code that identifies the session.
 
-NodeTunnel is an independent service. Its processing of connection metadata, network information, logs, and other technical information depends on its implementation and policies. The developer does not claim that NodeTunnel collects no such information or that relay data is never logged or retained.
+The Game does not send your name, e-mail, device identifier or any account information, and has no chat or voice features.
 
-For details about NodeTunnel's processing practices, consult its official website and any applicable privacy documentation: https://nodetunnel.io/
+The host's save stays on the host's device. The guest does not receive the host's save file, and rewards earned by the guest are stored on the guest's own device.
+
+To connect two players, a relay service necessarily handles technical network information, such as IP addresses and connection data. NodeTunnel is an independent service, and how it processes, logs or retains this information is described by NodeTunnel, not by the developer. The developer does not claim that NodeTunnel collects no such information or that it never keeps logs.
+
+NodeTunnel: https://nodetunnel.io/
 
 ## 3. How Information Is Used
 
-Information processed by the Game is used as necessary to:
+Information is used only to:
 
-- Run gameplay and maintain local progress.
-- Display the Game's activity through Discord Rich Presence.
-- Establish and maintain cooperative multiplayer sessions.
-- Synchronize gameplay actions and session state between players.
-- Support the functionality and security of the Game.
+- run the Game and keep your local progress;
+- show the Game's activity on Discord, if you use Rich Presence;
+- create and maintain co-op sessions and synchronize both players;
+- keep the Game working correctly and securely.
 
-The Game does not intentionally use these features to build a separate advertising profile of players.
+The Game does not sell your information, does not show ads, and does not build advertising profiles.
 
 ## 4. Information Sharing
 
-Information is transmitted to Discord when Rich Presence is used and to NodeTunnel or the relevant networking infrastructure when cooperative multiplayer is used.
+Information is shared with:
 
-Gameplay information may also be transmitted between the host and guest as required for cooperative gameplay.
+- **Discord**, when Rich Presence is active;
+- **NodeTunnel** (relay infrastructure) and **the other player**, only during co-op sessions, and only what is needed to play together.
 
-The developer does not operate a dedicated game-progress database. This does not mean that third-party services involved in connectivity or activity display do not process technical information.
-
-Third-party services operate independently and are responsible for describing their own data-processing practices.
+The developer does not receive this information and does not operate a server that stores it. Third-party services act independently and are responsible for describing their own practices.
 
 ## 5. Storage and Retention
 
-Gameplay-related information may be stored locally on your device, including the local guest-reward counter.
+Gameplay data is stored locally on your device until deleted. The developer does not store player accounts or multiplayer progress on any server.
 
-The Game's developer does not operate a dedicated server for storing player accounts or persistent multiplayer progress.
+The developer cannot state NodeTunnel's retention periods, and Discord's retention is governed by Discord's policies.
 
-The developer cannot specify NodeTunnel's exact retention periods for connection metadata or relay-related logs without confirmation from the provider. Please consult NodeTunnel's applicable documentation for information about its retention practices.
+## 6. Your Choices and Rights
 
-Discord's handling and retention of activity information are governed by Discord's own policies.
-
-## 6. Your Choices and Privacy Requests
-
-You can use Discord's available privacy settings to control the visibility of your activity, where supported.
-
-You can remove local Game data by deleting the relevant local files, although doing so may affect locally stored progress or rewards.
-
-For questions about personal information or requests concerning information handled by the Game's developer, contact the developer using the details below.
-
-Requests concerning information independently processed by Discord or NodeTunnel may need to be directed to those providers.
+- **Discord:** use Discord's settings to control the visibility of your activity or turn off activity sharing.
+- **Co-op:** you can avoid network processing entirely by playing in single-player mode.
+- **Local data:** you can delete your save and settings files at any time; this may erase your progress.
+- **Requests:** you may contact the developer (see below) with questions or requests about information the developer handles. Depending on where you live (for example, under Brazil's LGPD or the EU/UK GDPR), you may have rights such as access, correction or deletion; because the developer does not hold your gameplay data on any server, most such requests are answered by deleting local files. Requests about information processed by Discord or NodeTunnel should be sent to those providers.
 
 ## 7. Security
 
-The developer takes reasonable steps to maintain the Game's functionality and protect information under the developer's control. However, no software or network transmission can be guaranteed to be completely secure.
+The developer takes reasonable steps to keep the Game working and to protect information under the developer's control. No software or network transmission can be guaranteed to be completely secure. Co-op sessions use a third-party relay; share room codes only with people you trust.
 
 ## 8. Children's Privacy
 
-The Game is not intended to circumvent age restrictions imposed by applicable law or third-party services.
-
-If you believe that personal information has been provided to the developer inappropriately, please contact the developer so the matter can be reviewed.
+The Game is intended for players who meet the minimum age required by Discord (13 or older, or the higher age required in your country) when using Discord features, and by the laws of their country. The Game does not knowingly collect personal information from children. If you believe personal information has been provided to the developer inappropriately, contact the developer so it can be reviewed.
 
 ## 9. Third-Party Services and Open-Source Software
 
-The Game uses the following third-party components or services:
-
-- **Discord Rich Presence for Godot:** https://github.com/SlayHorizon/discord-rich-presence-godot
+- **Discord Rich Presence for Godot** (MIT License): https://github.com/SlayHorizon/discord-rich-presence-godot
 - **Discord Privacy Policy:** https://discord.com/privacy
-- **NodeTunnel:** https://nodetunnel.io/
+- **NodeTunnel** (MIT License): https://nodetunnel.io/
+- **Godot Engine** (MIT License): https://godotengine.org/license
 
-The Rich Presence plugin is open-source software under the MIT License. Its license and use are separate from Discord's own service terms.
+The Game's credits screen also links to the licenses of the music and sound effects used (for example, Creative Commons licenses). Those links open in your web browser only when you choose to click them.
 
 Third-party services and software may change. This policy may be updated if the Game's integrations or data practices change.
 
 ## 10. Changes to This Policy
 
-The current version of this Privacy Policy will be published at the public URL where this policy is hosted. The effective date will be updated when material changes are made.
+The current version is published at this page's public address. The effective date is updated when material changes are made.
 
 ## 11. Contact
 
-For privacy questions or requests concerning information handled by the Game's developer, contact:
+For privacy questions or requests:
 
- Developer: DARKWINTER
+Developer: DARKWINTER
 Email: darkwintercorp@gmail.com
 
+---
+
+# Cat's Clicker Corp. — Política de Privacidade
+
+**Data de vigência: 21 de outubro de 2026**
+
+## 1. Introdução
+
+Esta Política explica quais informações o Cat's Clicker Corp. ("o Jogo") processa quando você joga, usa o Discord Rich Presence ou participa de sessões cooperativas (coop).
+
+O Cat's Clicker Corp. é um jogo independente criado por DARKWINTER ("o desenvolvedor"). Discord e NodeTunnel são serviços de terceiros, separados, e não são operados pelo desenvolvedor.
+
+Resumindo: o Jogo não tem contas, anúncios, análise de uso (analytics) nem compras. Seu progresso fica no seu próprio dispositivo. As únicas situações em que informações saem do seu dispositivo são (a) o Discord Rich Presence, se você usa o Discord, e (b) as sessões coop.
+
+## 2. Informações processadas pelo Jogo
+
+### A. Dados locais de jogo
+
+Seu progresso (slots de save), suas configurações (como volume e idioma) e, no coop, um contador de recompensas ganhas como convidado ficam salvos em arquivos no seu próprio dispositivo, na pasta local de dados do Jogo. Esses dados não são enviados ao desenvolvedor.
+
+O desenvolvedor não opera servidor de contas nem banco de dados de progresso. Os arquivos locais permanecem no seu dispositivo até que você ou o Jogo os apaguem.
+
+### B. Discord Rich Presence
+
+O Jogo usa o plugin de código aberto `discord-rich-presence-godot` (SlayHorizon) para se comunicar com o aplicativo do Discord instalado no seu próprio computador. No Linux e no macOS, o plugin usa a ferramenta local `nc` do sistema para falar com o socket local do Discord; no Windows, usa um named pipe local. Essa comunicação fica no seu computador até ser tratada pelo próprio Discord.
+
+Quando ativo, o Jogo informa ao Discord um texto curto de atividade (por exemplo, que você está jogando a demo) e o nome do Jogo. Se outros usuários do Discord podem ver isso depende dos recursos do Discord e das suas configurações de privacidade lá. O Jogo não lê suas mensagens, senha ou lista de amigos do Discord.
+
+O Discord trata essas informações conforme a política dele: https://discord.com/privacy
+
+### C. Multiplayer cooperativo e NodeTunnel
+
+O modo coop (2 jogadores) usa o NodeTunnel, um serviço de relay de terceiros, para que anfitrião e convidado se conectem sem abrir portas no roteador. O modo solo não usa a rede.
+
+Durante uma sessão coop, o seguinte é enviado entre anfitrião e convidado pelo relay do NodeTunnel:
+
+- as ações do convidado (cliques no novelo, coleta de petiscos, compras na loja, renascimento e roleta);
+- o estado sincronizado do jogo (novelo e sua vida, petiscos no chão, configurações de upgrades e do Renascimento, estado do desafio, mensagens do tutorial);
+- a posição do cursor do outro jogador, efeitos visuais e verificações de conexão (ping);
+- o código da sala que identifica a sessão.
+
+O Jogo não envia seu nome, e-mail, identificador do dispositivo nem qualquer dado de conta, e não possui chat nem voz.
+
+O save do anfitrião fica no dispositivo do anfitrião. O convidado não recebe o arquivo de save do anfitrião, e as recompensas ganhas pelo convidado ficam guardadas no dispositivo do próprio convidado.
+
+Para conectar dois jogadores, um serviço de relay necessariamente trata informações técnicas de rede, como endereços IP e dados da conexão. O NodeTunnel é um serviço independente, e como ele processa, registra (logs) ou retém essas informações é descrito pelo NodeTunnel, não pelo desenvolvedor. O desenvolvedor não afirma que o NodeTunnel não coleta tais informações nem que nunca guarda logs.
+
+NodeTunnel: https://nodetunnel.io/
+
+## 3. Como as informações são usadas
+
+As informações são usadas somente para:
+
+- executar o Jogo e manter seu progresso local;
+- mostrar a atividade do Jogo no Discord, se você usa o Rich Presence;
+- criar e manter sessões coop e sincronizar os dois jogadores;
+- manter o Jogo funcionando de forma correta e segura.
+
+O Jogo não vende suas informações, não exibe anúncios e não cria perfis publicitários.
+
+## 4. Compartilhamento
+
+As informações são compartilhadas com:
+
+- o **Discord**, quando o Rich Presence está ativo;
+- o **NodeTunnel** (infraestrutura de relay) e **o outro jogador**, somente em sessões coop e apenas o necessário para jogarem juntos.
+
+O desenvolvedor não recebe essas informações e não opera servidor que as armazene. Serviços de terceiros atuam de forma independente e são responsáveis por descrever suas próprias práticas.
+
+## 5. Armazenamento e retenção
+
+Os dados de jogo ficam armazenados localmente no seu dispositivo até serem apagados. O desenvolvedor não armazena contas de jogadores nem progresso multiplayer em nenhum servidor.
+
+O desenvolvedor não pode informar os prazos de retenção do NodeTunnel, e a retenção do Discord segue as políticas do Discord.
+
+## 6. Suas escolhas e direitos
+
+- **Discord:** use as configurações do Discord para controlar a visibilidade da sua atividade ou desativar o compartilhamento de atividade.
+- **Coop:** você evita qualquer tratamento de rede jogando no modo solo.
+- **Dados locais:** você pode apagar seus arquivos de save e configurações a qualquer momento; isso pode apagar seu progresso.
+- **Solicitações:** você pode contatar o desenvolvedor (abaixo) com dúvidas ou pedidos sobre informações que o desenvolvedor trata. Dependendo de onde você mora (por exemplo, pela LGPD no Brasil ou pelo GDPR na UE/Reino Unido), você pode ter direitos como acesso, correção ou exclusão; como o desenvolvedor não mantém seus dados de jogo em nenhum servidor, a maioria dos pedidos se resolve apagando os arquivos locais. Pedidos sobre informações tratadas por Discord ou NodeTunnel devem ser enviados a esses provedores.
+
+## 7. Segurança
+
+O desenvolvedor adota medidas razoáveis para manter o Jogo funcionando e proteger as informações sob seu controle. Nenhum software ou transmissão de rede é completamente seguro. As sessões coop usam um relay de terceiros; compartilhe códigos de sala apenas com pessoas de confiança.
+
+## 8. Privacidade de crianças
+
+O Jogo é destinado a jogadores que atendam à idade mínima exigida pelo Discord (13 anos ou mais, ou a idade maior exigida no seu país) ao usar recursos do Discord, e pelas leis do seu país. O Jogo não coleta conscientemente informações pessoais de crianças. Se você acredita que informações pessoais foram fornecidas ao desenvolvedor de forma inadequada, entre em contato para que o caso seja analisado.
+
+## 9. Serviços de terceiros e software de código aberto
+
+- **Discord Rich Presence for Godot** (Licença MIT): https://github.com/SlayHorizon/discord-rich-presence-godot
+- **Política de Privacidade do Discord:** https://discord.com/privacy
+- **NodeTunnel** (Licença MIT): https://nodetunnel.io/
+- **Godot Engine** (Licença MIT): https://godotengine.org/license
+
+A tela de créditos do Jogo também tem links para as licenças das músicas e efeitos sonoros usados (por exemplo, licenças Creative Commons). Esses links abrem no seu navegador somente quando você clica neles.
+
+Serviços e softwares de terceiros podem mudar. Esta política pode ser atualizada se as integrações ou práticas de dados do Jogo mudarem.
+
+## 10. Alterações desta política
+
+A versão atual fica publicada no endereço público desta página. A data de vigência é atualizada quando houver mudanças relevantes.
+
+## 11. Contato
+
+Para dúvidas ou pedidos sobre privacidade:
+
+Desenvolvedor: DARKWINTER
+E-mail: darkwintercorp@gmail.com
